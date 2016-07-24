@@ -29,7 +29,7 @@ class Counter extends Component {
 
 Counter.propTypes = {
   counterValue: PropTypes.number.isRequired,
-  actions: PropTypes.func.isRequired,
+  actions: PropTypes.object.isRequired,
 };
 
 export default Counter;

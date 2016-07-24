@@ -1,10 +1,10 @@
 import { render } from 'react-dom';
 import React from 'react';
-import App from './containers/App';
+import Router from './router';
 
 const containerEl = document.getElementById('container');
 
 render(
-  <App />,
+  Router,
   containerEl
 );
