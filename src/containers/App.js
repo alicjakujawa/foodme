@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Provider } from 'react-redux';
-import CounterContainer from './CounterContainer';
-import DevTools from './DevTools';
 import store from '../store/configureStore';
 
-export default class App extends Component {
+class App extends Component {
   render() {
+    const { main, header } = this.props;
     return (
       <Provider store={store}>
         <div>
-          <CounterContainer />
-          {__DEV__ && <DevTools />}
+          {header}
+          {main}
         </div>
       </Provider>
     );
   }
 }
+
+App.propTypes = {
+  header: PropTypes.object,
+  main: PropTypes.object,
+};
+
+export default App;
