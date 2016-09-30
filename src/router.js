@@ -8,8 +8,8 @@ import './styles/main.sass';
 
 export default (
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <Route path="home" components={{ main: MainPage, header: MainHeader }} />
+    <Route path="/"component={App}>
+      <Route path="home" components={{ main: MainPage, header: () => (<MainHeader landing />) }} />
       <Route path="search" components={{ main: SearchPage, header: MainHeader }} />
     </Route>
   </Router>

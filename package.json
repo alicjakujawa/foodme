@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=true webpack-dev-server --progress --inline --hot --no-info"
+    "start": "DEBUG=true webpack-dev-server --progress --inline --hot --no-info --history-api-fallback"
   },
   "repository": {
     "type": "git",
